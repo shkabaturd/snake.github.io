@@ -216,8 +216,8 @@ const engine = new Engine(GODOT_CONFIG);
 	}
 
 	const missing = Engine.getMissingFeatures();
-	//if (missing.length !== 0) {
-	if (false) {
+	if (missing.length !== 0) {
+	//if (false) {
 		const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
 		displayFailureNotice(missingMsg + missing.join('\n'));
 	} else {
