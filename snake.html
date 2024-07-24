@@ -111,6 +111,7 @@ body {
 		</style>
 		<link id='-gd-engine-icon' rel='icon' type='image/png' href='snake.icon.png' />
 <link rel='apple-touch-icon' href='snake.apple-touch-icon.png'/>
+<link rel='manifest' href='snake.manifest.json'>
 
 	</head>
 	<body>
@@ -137,7 +138,7 @@ body {
 
 		<script src="snake.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"snake","experimentalVK":false,"fileSizes":{"snake.pck":7200,"snake.wasm":35708238},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"snake","experimentalVK":false,"fileSizes":{"snake.pck":7312,"snake.wasm":49282035},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"snake.service.worker.js"};
 const engine = new Engine(GODOT_CONFIG);
 
 (function () {
@@ -216,8 +217,7 @@ const engine = new Engine(GODOT_CONFIG);
 	}
 
 	const missing = Engine.getMissingFeatures();
-	//if (missing.length !== 0) {
-	if (false) {
+	if (missing.length !== 0) {
 		const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
 		displayFailureNotice(missingMsg + missing.join('\n'));
 	} else {
